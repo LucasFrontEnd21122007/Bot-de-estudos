@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bot de Estudos</title>
+  <link rel="stylesheet" type="text/css" href="server.css" media="screen">
+  <link rel="stylesheet" type="text/js" href="server.js" media="screen">
+</head>
+<body>
+  <h1>Bem-vindo ao Bot de Estudos</h1>
+  <div id="question-container">
+    <h2 id="question"></h2>
+    <ul id="options">
+      <li><button onclick="checkAnswer(0)">Opção 1</button></li>
+      <li><button onclick="checkAnswer(1)">Opção 2</button></li>
+      <li><button onclick="checkAnswer(2)">Opção 3</button></li>
+      <li><button onclick="checkAnswer(3)">Opção 4</button></li>
+    </ul>
+  </div>
+  <div id="result-container">
+    <p id="result"></p>
+    <button onclick="nextQuestion()">Próxima pergunta</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
