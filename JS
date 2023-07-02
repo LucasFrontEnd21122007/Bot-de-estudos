@@ -1,0 +1,49 @@
+const questions = [
+    {
+      question: "Qual é a capital do Brasil?",
+      options: ["Rio de Janeiro", "São Paulo", "Brasília", "Salvador"],
+      answer: 2
+    },
+    {
+      question: "Quem descobriu a gravidade?",
+      options: ["Albert Einstein", "Isaac Newton", "Galileu Galilei", "Nikola Tesla"],
+      answer: 1
+    },
+    {
+      question: "Qual é a fórmula da água?",
+      options: ["H2O", "CO2", "O2", "NaCl"],
+      answer: 0
+    }
+  ];
+  
+  let currentQuestion = 0;
+  let score = 0;
+  
+  function displayQuestion() {
+    const questionElement = document.getElementById("question");
+    const optionsElement = document.getElementById("options");
+  
+    const current = questions[currentQuestion];
+    questionElement.textContent = current.question;
+  
+    optionsElement.innerHTML = "";
+    for (let i = 0; i < current.options.length; i++) {
+      const li = document.createElement("li");
+      const button = document.createElement("button");
+      button.textContent = current.options[i];
+      li.appendChild(button);
+      optionsElement.appendChild(li);
+    }
+  }
+  
+  function checkAnswer(selectedOption) {
+    const resultElement = document.getElementById("result");
+    const resultContainer = document.getElementById("result-container");
+  }
+    const current = questions[currentQuestion];
+    if (selectedOption === current.answer) {
+      resultElement.textContent = "Resposta correta!";
+      score++;
+    } else {
+      resultElement.textContent = "Resposta incorreta!";
+    };
